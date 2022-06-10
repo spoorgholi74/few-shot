@@ -33,9 +33,10 @@ if __name__ == '__main__':
     train_y = trainy
 
     max_epoch = 5
-    epoch_size = 2000
+    epoch_size = 10
 
     # Train model
+    print("training the model")
     train(model, optimizer, train_x, train_y, n_way, n_support, n_query, max_epoch, epoch_size)
 
     # Test model

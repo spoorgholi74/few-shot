@@ -28,6 +28,7 @@ def train(model, optimizer, train_x, train_y, n_way, n_support, n_query, max_epo
         running_acc = 0.0
 
         for episode in tnrange(epoch_size, desc="Epoch {:d} train".format(epoch + 1)):
+            print("Running episode %s " % episode)
             sample = extract_sample(n_way, n_support, n_query, train_x, train_y)
             optimizer.zero_grad()
             loss, output = model.set_forward_loss(sample)
